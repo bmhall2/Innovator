@@ -1,0 +1,5 @@
+C:\Users\halb01\Desktop\Innovation\Innovator\Innovator.Domain\bin\Debug\Innovator.Domain.dll
+C:\Users\halb01\Desktop\Innovation\Innovator\Innovator.Domain\bin\Debug\Innovator.Domain.pdb
+C:\Users\halb01\Desktop\Innovation\Innovator\Innovator.Domain\obj\Debug\Innovator.Domain.csprojResolveAssemblyReference.cache
+C:\Users\halb01\Desktop\Innovation\Innovator\Innovator.Domain\obj\Debug\Innovator.Domain.dll
+C:\Users\halb01\Desktop\Innovation\Innovator\Innovator.Domain\obj\Debug\Innovator.Domain.pdb

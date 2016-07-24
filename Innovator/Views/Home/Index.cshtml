@@ -1,0 +1,81 @@
+﻿<div class="row">
+
+    <div class="alert alert-success" role="alert" data-bind="visible: userWelcomeMessage().length > 0, text: userWelcomeMessage"></div>
+    <div class="alert alert-success" role="alert" data-bind="visible: tracingSuccessMessage().length > 0, text: tracingSuccessMessage"></div>
+
+    <div class="col-md-6" data-bind="visible: showLogin()">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Authorization
+            </div>
+            <div class="panel-body">
+                <div class="input-group">
+                    <span class="input-group-addon" id="user-login">User Login</span>
+                    <input type="text" class="form-control" aria-describedby="basic-addon1" data-bind="value: userLogin">
+                </div>
+
+                <div class="input-group top-buffer">
+                    <span class="input-group-addon" id="user-password">User Password</span>
+                    <input type="text" class="form-control" aria-describedby="basic-addon1" data-bind="value: userPassword">
+                </div>
+
+                <button class="btn btn-primary top-buffer" data-bind="click: login">Login</button>
+
+                <h4>OR</h4>
+
+                <div class="input-group">
+                    <span class="input-group-addon" id="existing-tracingId">Existing Tracing Id</span>
+                    <input type="text" class="form-control" aria-describedby="basic-addon1" data-bind="value: existingTracingId">
+                </div>
+
+                <button class="btn btn-primary top-buffer" data-bind="click: useExistingTrace">Use Tracing Id</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6" data-bind="visible: showTracingInfo()">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Tracing Information
+            </div>
+            <div class="panel-body">
+                <div class="input-group">
+                    <span class="input-group-addon" id="api-trace">Method To Trace</span>
+                    <input type="text" class="form-control" aria-describedby="basic-addon1" data-bind="value: apiToTrace">
+                </div>
+
+                <button class="btn btn-primary top-buffer" data-bind="click: trace">Trace</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12" data-bind="visible: showTracingResults()">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Tracing Results
+            </div>
+            <div class="panel-body">
+
+                <button class="btn btn-primary" data-bind="click: refreshResults">GetResults</button>
+
+                <div data-bind="foreach: apiCalls, visible: apiCalls().length > 0">
+                    <div class="panel panel-success col-md-4">
+                        <div class="panel-heading" data-bind="text: method"></div>
+                        <div class="panel-body">
+                            <div>
+                                <span class="label label-info">Request</span>
+                                <textarea data-bind="value: request"></textarea>
+                            </div>
+                            <div>
+                                <span class="label label-info">Response</span>
+                                <textarea data-bind="value: response"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/index.js"></script>
